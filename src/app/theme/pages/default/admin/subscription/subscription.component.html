@@ -1,0 +1,168 @@
+<!-- 标题 -->
+<div class="m-subheader">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">订阅</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">　<i class="m-nav__link-icon la la-home"></i></a>
+				</li>
+				<li class="m-nav__separator">	-　</li>
+				<li class="m-nav__item"><a href="" class="m-nav__link"><span class="m-nav__link-text"> 用户订阅信息 </span></a></li> 
+
+			</ul>
+		</div>　
+
+	</div>
+</div> 
+
+<!-- 内容 -->
+<div class="m-content">
+	<div class="row">
+		<div class="col-xl-12">
+		  <ul class="nav nav-tabs  m-tabs-line" role="tablist">
+            <li class="nav-item m-tabs__item">
+                <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_tabs_6_1" role="tab"  >
+                    订阅信息
+                </a>
+            </li> 
+            <li class="nav-item m-tabs__item">
+                <a class="nav-link m-tabs__link " data-toggle="tab" href="#m_tabs_6_2" role="tab"  >
+                    支付历史
+                </a>
+            </li>
+        </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="m_tabs_6_1" role="tabpanel"  >
+          <form class="m-form m-form--label-align-right n" novalidate="">
+            <input class="ng-tns-c4-6" name="PaymentPeriodType" type="hidden" value="@tenant.PaymentPeriodType">
+            <input class="ng-tns-c4-6" name="Gateway" type="hidden" value="@SubscriptionPaymentGatewayType.Paypal">
+
+            <div class="form-group m-form__group row">
+                <label class="col-sm-4 control-label m--font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">版本</font></font></label>
+                <div class="col-sm-8">
+                    <p class="ng-tns-c4-6">
+                      <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;"> 标准 </font>
+                        <span class="m-badge m-badge--success m-badge--wide ng-tns-c4-6"> <font style="vertical-align: inherit;">免费</font></span>
+                      </font>
+                      <span class="m-badge m-badge--success m-badge--wide ng-tns-c4-6"><font style="vertical-align: inherit;"></font></span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label class="col-sm-4 control-label m--font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">订阅开始日期</font></font></label>
+                <div class="col-sm-8">
+                    <p class="ng-tns-c4-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2017年12月8日</font></font></p>
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label class="col-sm-4 control-label m--font-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">订阅结束日期</font></font></label>
+                <div class="col-sm-8">
+                    <p class="ng-tns-c4-6">
+                        <span class="ng-tns-c4-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">无限</font></font></span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label class="col-sm-4 control-label"></label>
+                <div class="col-sm-8">
+                    <a class="btn btn-warning ng-tns-c4-6" href="/account/select-edition"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        升级
+                    </font></font></a>
+                </div>
+            </div>
+           </form>
+        </div>
+        <div class="tab-pane " id="m_tabs_6_2" role="tabpanel"  > 
+           <!--table列表::支付列表-->
+           <table class="table m-table m-table--head-bg-success">
+                <thead>
+                    <tr>
+                        <th> # </th>
+                        <th> 发票 </th>
+                        <th> 处理时间 </th>
+                        <th> 版本 </th>
+                        <th> 网关 </th>
+                        <th> 量 </th>
+                        <th> 状态 </th>
+                        <th> 日期 </th>
+                        <th> 日计 </th>
+                        <th> 付款ID </th>
+                        <th> 发票号码 </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"> </th>
+                        <td> Jhon </td>
+                        <td> 2017-12-13 </td>
+                        <td> @V10-23 </td>
+                        <td> 23 </td>
+                        <td> success </td>
+                        <td> ok </td>
+                        <td> 2017-12-13 12:23:23</td>
+                        <td> 2 </td>
+                        <td> @object </td>
+                        <td> v320-2234-23420-2340 </td>
+                    </tr> 
+                    <tr>
+                        <th scope="row"> </th>
+                        <td> Jhon </td>
+                        <td> 2017-12-13 </td>
+                        <td> @V10-23 </td>
+                        <td> 23 </td>
+                        <td> success </td>
+                        <td> ok </td>
+                        <td> 2017-12-13 12:23:23</td>
+                        <td> 2 </td>
+                        <td> @object </td>
+                        <td> v320-2234-23420-2340 </td>
+                    </tr> 
+                    <tr>
+                        <th scope="row"> </th>
+                        <td> Jhon </td>
+                        <td> 2017-12-13 </td>
+                        <td> @V10-23 </td>
+                        <td> 23 </td>
+                        <td> success </td>
+                        <td> ok </td>
+                        <td> 2017-12-13 12:23:23</td>
+                        <td> 2 </td>
+                        <td> @object </td>
+                        <td> v320-2234-23420-2340 </td>
+                    </tr> 
+                    <tr>
+                        <th scope="row"> </th>
+                        <td> Jhon </td>
+                        <td> 2017-12-13 </td>
+                        <td> @V10-23 </td>
+                        <td> 23 </td>
+                        <td> success </td>
+                        <td> ok </td>
+                        <td> 2017-12-13 12:23:23</td>
+                        <td> 2 </td>
+                        <td> @object </td>
+                        <td> v320-2234-23420-2340 </td>
+                    </tr> 
+                    <tr>
+                        <th scope="row"> </th>
+                        <td> Jhon </td>
+                        <td> 2017-12-13 </td>
+                        <td> @V10-23 </td>
+                        <td> 23 </td>
+                        <td> success </td>
+                        <td> ok </td>
+                        <td> 2017-12-13 12:23:23</td>
+                        <td> 2 </td>
+                        <td> @object </td>
+                        <td> v320-2234-23420-2340 </td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+      </div> 
+		 
+		</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+{
+"total":20,
+"pageNum": 1,
+"pageSize": 15,
+"items":
+    [
+        {"id": "1","name": "小三","fullName":"张三","email":"zhangsan@mail.com","age":"23"},
+        {"id": "2","name": "小四","fullName":"李四","email":"lisi@mail.com","age":"24"}, 
+        {"id": "5","name": "小七","fullName":"刘七","email":"liuqi@mail.com","age":"27"}
+    ]
+}

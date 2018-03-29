@@ -1,0 +1,38 @@
+.upc-message {
+    position: fixed;
+    z-index: 1999;
+    width: 100%;
+    top: 36px;
+    left: 0;
+    pointer-events: none;
+    padding: 8px;
+    text-align: center;
+  }
+  .upc-message i {
+      margin-right: 8px;
+      font-size: 14px;
+      top: 1px;
+      position: relative;
+  }
+  .upc-message-success i {
+      color: green;
+  }
+  .upc-message-warning i {
+      color: yellow;
+  }
+  .upc-message-error i {
+      color: red;
+  }
+  .upc-message-content {
+      padding: 8px 16px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 2px 8px #000000;
+      -ms-box-shadow: 0 2px 8px #000000;
+      box-shadow: 0 2px 8px #000000;
+      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+      background: #fff;
+      display: inline-block;
+      pointer-events: all;
+  }
+ 

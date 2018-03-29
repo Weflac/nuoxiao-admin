@@ -1,0 +1,193 @@
+<!-- 标题 -->
+<div class="m-subheader">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">组织机构</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon"><i class="m-nav__link-icon la la-home"></i></a>
+				</li>
+				<li class="m-nav__separator">-</li>
+				<li class="m-nav__item"><a href="" class="m-nav__link"><span class="m-nav__link-text">应用组织机构和行政区划到用户和实体</span></a></li>
+
+			</ul>
+		</div>　
+
+	</div>
+</div>
+
+<!-- 内容 -->
+<div class="m-content">
+	<div class="row">
+		<div class="col-xl-6">
+			<!--组织结构树-->
+			<div class="m-portlet ">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						 <div class="m-portlet__head-title">　<h3 class="m-portlet__head-text"> 组织结构树  </h3> </div>
+					</div>
+					<div class="m-portlet__head-tools">
+							<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#m-modal-organ"> 添加组织</button>
+							<!--modal： 添加组织 -->
+							<div class="modal fade" id="m-modal-organ" tabindex="-1" data-backdrop="static" role="dialog"  >
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="new-organ">
+														新建组织机构
+												</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">
+														&times;
+													</span>
+												</button>
+											</div>
+											<div class="modal-body">
+														<div class="form-group form-md-line-input form-md-floating-label text-left">
+															<label for="exampleInputEmail1"> 名字 </label>
+															<input class="form-control" id="exampleInputEmail1"  type="text">
+														</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-dismiss="modal"> 取消 </button>
+												<button type="button" class="btn btn-primary"> 	保存 </button>
+											</div>
+										</div>
+									</div>
+							</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<!--结构树-->
+          <div id="m_tree_2" class="tree-demo">
+            <!-- <ul>
+              <li>
+                Root node 1
+                <ul>
+                  <li data-jstree='{ "selected" : true }'>
+                    <a href="javascript:;">
+                      Initially selected
+                    </a>
+                  </li>
+                  <li data-jstree='{ "icon" : "fa fa-briefcase m--font-success " }'>
+                    custom icon URL
+                  </li>
+                  <li data-jstree='{ "opened" : true }'>
+                    initially open
+                    <ul>
+                      <li data-jstree='{ "disabled" : true }'>
+                        Disabled Node
+                      </li>
+                      <li data-jstree='{ "type" : "file" }'>
+                        Another node
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-jstree='{ "icon" : "fa fa-warning m--font-danger" }'>
+                    Custom icon class (bootstrap)
+                  </li>
+                </ul>
+              </li>
+              <li data-jstree='{ "type" : "file" }'>
+                <a href="http://www.jstree.com">
+                  Clickanle link node
+                </a>
+              </li>
+            </ul> -->
+					</div> 　
+
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-6">
+			<!--组织下的用户-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text"> 	组织成员 	</h3>
+						</div>
+					</div>
+					<div class="m-portlet__head-tools">
+							<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#m-modal-user" > 添加用户</button>
+							<!--modal： 添加组织成员 -->
+							<div class="modal fade" id="m-modal-user" tabindex="-1"  data-backdrop="static" role="dialog" >
+									<div class="modal-dialog modal-lg" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="choose-user">
+														选择用户
+												</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">
+														&times;
+													</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												 
+															<div class="input-group margin-bottom-10">
+																	<input autofocus="" class="form-control" [(ngModel)]="searchText" name="filterText" type="text" placeholder="搜索...">
+																	<span class="input-group-btn">
+																			<button class="btn btn-primary" (click)='searchUser()' ><i class="flaticon-search-1"></i></button>
+																	</span>
+															</div>
+															<div class="primeng-datatable-container">
+																	<!--用户列表 -->
+																	<div class="tab-pane " id="m_tabs_6_2" role="tabpanel"  >
+
+																		<table class="table m-table">
+																				 <thead>
+																						 <tr>
+																								 <th style="width:30px;">  
+																									  <label class="m-checkbox">
+																											<input class="checkall" type="checkbox"><span></span>
+																										</label> 
+																							   </th>
+																								 <th> 用户名 </th>
+																						 </tr>
+																				 </thead>
+																				 <tbody>
+																						 <tr  scope="row" *ngFor='let item of userList; let i=index;'>
+																								 <td class=""> 
+																									  <label class="m-checkbox">
+																											<input type="checkbox">  <span></span>
+																										</label>
+																								 </td>
+																								 <td class="pull-left" > {{++i}}.{{item.name}} </td>
+																						 </tr>
+																				 </tbody>
+																		 </table>
+																 </div>
+																 <div class="table">
+																	  <!-- <p-paginator rows="{{pageSize}}"
+																								totalRecords="{{totalRecords}}"
+																								first="{{offset}}"
+																								(onPageChange)="pageChanged($event)">
+																		</p-paginator> -->
+																 </div>
+															</div>
+												 
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-dismiss="modal"> 取消 </button>
+												<button type="button" class="btn btn-primary" (click)='confirm()' >  	保存 </button>
+											</div>
+										</div>
+									</div>
+							</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<!--begin::Section-->
+					<div class="m-section">
+						<h3 class="m-section__heading">
+							选择一个组织成员。
+						</h3>
+					</div>
+					<!--end::Section-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

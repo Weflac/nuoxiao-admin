@@ -1,0 +1,154 @@
+<!-- 标题 -->
+<div class="m-subheader">
+  <div class="d-flex align-items-center">
+    <div class="mr-auto">
+      <h3 class="m-subheader__title m-subheader__title--separator">表单</h3>
+      <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+        <li class="m-nav__item m-nav__item--home">
+          <a href="#" class="m-nav__link m-nav__link--icon">
+            <i class="m-nav__link-icon la la-home"></i>
+          </a>
+        </li>
+        <li class="m-nav__separator">-</li>
+        <li class="m-nav__item">
+          <a href="" class="m-nav__link">
+            <span class="m-nav__link-text">From</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- 内容 -->
+<div class="m-content">
+  <div class="row">
+    <div class="col-md-12">
+      <!--begin::Portlet-->
+      <div class="m-portlet m-portlet--tab">
+        <div class="m-portlet__head">
+          <div class="m-portlet__head-caption">
+            <div class="m-portlet__head-title">
+              <span class="m-portlet__head-icon m--hide">
+                <i class="la la-gear"></i>
+              </span>
+              <h3 class="m-portlet__head-text"> 表单验证 </h3>
+            </div>
+          </div>
+        </div>
+        <!--begin::Form-->
+        <form class="m-form m-form--fit m-form--label-align-right" (ngSubmit)="onSubmit(f)" novalidate #f="ngForm">
+          <div class="m-portlet__body">
+            <div class="form-group m-form__group m--margin-top-10">
+              <div class="alert m-alert m-alert--default" role="alert">
+                {{ f.controls.name?.errors | json }} 
+                {{ f.controls.mobile?.errors | json }}
+                Here are examples of
+                <code>
+                  .form-control
+                </code>
+                applied to each textual HTML5 input type:
+              </div>
+            </div>
+            <div class="form-group m-form__group row">
+              <label for="example-text-input" class="col-2 col-form-label"> 名称 </label>
+              <div class="col-10">
+                <input class="form-control m-input" type="text" name="name" [(ngModel)]='user.name' minlength='6' required>
+              </div>
+              <div class="form-control-feedback" *ngIf="f.controls.name?.required" >
+                  Name is required
+              </div> 
+              <div class="form-control-feedback" *ngIf="f.controls.name?.minlength">
+                  Name of 6 characters
+              </div>
+            </div>
+            <div class="form-group m-form__group row">
+              <label for="example-search-input" class="col-2 col-form-label"> 年龄 </label>
+              <div class="col-10">
+                <input class="form-control m-input" type="text" name="age" [(ngModel)]="user.age">
+              </div>
+            </div>
+            <div class="form-group m-form__group row">
+              <label for="example-email-input" class="col-2 col-form-label"> 性别 </label>
+              <div class="col-10">
+                <label *ngFor="let gender of genders;">
+                  <input type="radio" name="gender" [(ngModel)]="user.gender" [value]="gender.value"> {{gender.display}}
+                </label>
+                <!-- <input class="form-control m-input" type="text" name="gender" [(ngModel)]="user.gender"> -->
+              </div>
+            </div>
+            <div class="form-group m-form__group row">
+              <label for="example-url-input" class="col-2 col-form-label"> 角色 </label>
+              <div class="col-10">
+                <input class="form-control m-input" type="text" name="role" [(ngModel)]="user.role">
+              </div>
+            </div>
+            <div class="form-group m-form__group row">
+              <label for="example-tel-input" class="col-2 col-form-label"> 手机</label>
+              <div class="col-10">
+                <input class="form-control m-input" type="tel" name="mobile" [(ngModel)]="user.mobile" required>
+              </div>
+            </div>
+            <div class="form-group m-form__group row">
+              <label for="example-password-input" class="col-2 col-form-label"> 密码</label>
+              <div class="col-10">
+                <input class="form-control m-input" type="password" name="password" [(ngModel)]="user.password">
+              </div>
+            </div>
+            <div class="form-group m-form__group row">
+              <label for="example-number-input" class="col-2 col-form-label"> 是否激活</label>
+              <div class="col-10">
+                <input class="form-control m-input" type="number" value="42" name="isActive" [(ngModel)]="user.isActive">
+              </div>
+            </div>
+            <div class="form-group m-form__group row">
+              <label for="example-datetime-local-input" class="col-2 col-form-label"> 时间</label>
+              <div class="col-10">
+                <input class="form-control m-input" type="datetime-local" value="2011-08-19T13:45:00" name="datetime" [(ngModel)]="user.datetime">
+              </div>
+            </div>
+            <div class="form-group m-form__group row">
+              <label class="col-2 col-form-label">地址</label>
+              <div class="col-5">
+                <select name="province" class="form-control" [(ngModel)]="user.province" (change)="changeProvince($event.target.value)">
+                  <option *ngFor="let province of provinces" [value]="province.pk">
+                    {{province.pv}}
+                  </option>
+                </select>
+                <div class="col-5">
+                </div>
+                <select name="city" class="form-control" [(ngModel)]="user.city">
+                  <option *ngFor="let city of cities" [value]="city.ck">
+                    {{city.cv}}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <!-- <div class="form-group m-form__group row">
+                <label for="example-color-input" class="col-2 col-form-label">
+                  颜色
+                </label>
+                <div class="col-10">
+                  <input class="form-control m-input" type="color" value="#563d7c" id="example-color-input">
+                </div>
+              </div> -->
+          </div>
+          <div class="m-portlet__foot m-portlet__foot--fit">
+            <div class="m-form__actions">
+              <div class="row">
+                <div class="col-2"></div>
+                <div class="col-10">
+                  <button type="submit" [disabled]="f.invalid" class="btn btn-success"> 提交 </button>
+                  <button type="reset" class="btn btn-secondary"> 取消 </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

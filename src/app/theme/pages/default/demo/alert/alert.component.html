@@ -1,0 +1,82 @@
+ <!-- 标题 -->
+ <div class="m-subheader">
+    <div class="d-flex align-items-center">
+      <div class="mr-auto">
+        <h3 class="m-subheader__title m-subheader__title--separator">提示框</h3>
+        <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+          <li class="m-nav__item m-nav__item--home">
+            <a href="#" class="m-nav__link m-nav__link--icon"><i class="m-nav__link-icon la la-home"></i></a>
+          </li>
+          <li class="m-nav__separator">-</li>
+          <li class="m-nav__item"><a href="" class="m-nav__link"><span class="m-nav__link-text">alert</span></a></li>
+  
+        </ul>
+      </div>　
+  
+    </div>
+</div>
+
+
+<!-- 内容 -->
+<div class="m-content">
+   
+	<div class="m-portlet">
+		<div class="m-portlet__head">
+			<div class="m-portlet__head-caption">
+				<div class="m-portlet__head-title">
+					<h3 class="m-portlet__head-text">
+						表单验证，提示
+					</h3>
+				</div>
+			</div>
+		</div>
+		<!--begin::Form-->
+		<form (ngSubmit)='f.form.valid && save()' #f="ngForm" class="m-form m-form--fit m-form--label-align-right" id="m_form_1">
+			<div class="m-portlet__body">
+				<div class="m-form__content">
+					<div class="m-alert m-alert--icon alert alert-danger m--hide" role="alert" id="m_form_1_msg">
+						<div class="m-alert__icon">
+							<i class="la la-warning"></i>
+						</div>
+						<div class="m-alert__text">
+							Oh snap! Change a few things up and try submitting again.
+						</div>
+						<div class="m-alert__close">
+							<button type="button" class="close" data-close="alert" aria-label="Close"></button>
+						</div>
+					</div>
+					<ng-template #alertTip></ng-template>
+        </div>
+        
+				<div class="form-group m-form__group row">
+					<label class="col-form-label col-lg-3 col-sm-12"> Email * </label>
+					<div class="col-lg-4 col-md-9 col-sm-12">
+						<input type="text" class="form-control m-input" [(ngModel)]="model.email" name="email" placeholder="Enter your email">
+						<span class="m-form__help"> We'll never share your email with anyone else. </span>
+					</div>
+				</div>
+				<div class="form-group m-form__group row">
+					<label class="col-form-label col-lg-3 col-sm-12"> 	URL * </label>
+					<div class="col-lg-4 col-md-9 col-sm-12">
+						<div class="input-group">
+							<input type="text" class="form-control m-input" [(ngModel)]="model.url" name="url" placeholder="Enter your url">
+							<span class="input-group-addon"> .via.com </span>
+						</div>
+						<span class="m-form__help"> Please enter your website URL. </span>
+					</div>
+				</div>  
+      </div>
+			<div class="m-portlet__foot m-portlet__foot--fit">
+				<div class="m-form__actions m-form__actions">
+					<div class="row">
+						<div class="col-lg-9 ml-lg-auto">
+							<button type="button" [disabled]="loading"  class="btn btn-success"> 确定 </button>
+							<button type="reset" class="btn btn-secondary"> 取消 </button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<!--end::Form-->
+	</div> 
+</div>

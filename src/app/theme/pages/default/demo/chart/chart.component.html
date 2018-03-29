@@ -1,0 +1,41 @@
+ <!-- 标题 -->
+ <div class="m-subheader">
+    <div class="d-flex align-items-center">
+      <div class="mr-auto">
+        <h3 class="m-subheader__title m-subheader__title--separator">图表</h3>
+        <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+          <li class="m-nav__item m-nav__item--home">
+            <a href="#" class="m-nav__link m-nav__link--icon"><i class="m-nav__link-icon la la-home"></i></a>
+          </li>
+          <li class="m-nav__separator">-</li>
+          <li class="m-nav__item"><a href="" class="m-nav__link"><span class="m-nav__link-text">Echart</span></a></li>
+  
+        </ul>
+      </div>　
+  
+    </div>
+</div>
+
+<!-- 内容 -->
+<div class="m-content">
+    <div class="row">
+      <div class="col-sm-12">
+        <button class="btn" id='test'>测试</button>
+      </div>
+    </div>
+    <div class="row" [@fadeIn]>
+      <div class="col-sm-12">
+          <echart [chartType]="pieChart" class="nf-chart"></echart>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+          <echart [chartType]="barChart" class="nf-chart"></echart>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+          <echart [chartType]="lineChart" class="nf-chart"></echart>
+      </div>
+    </div>
+</div>

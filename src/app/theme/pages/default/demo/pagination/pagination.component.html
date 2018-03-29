@@ -1,0 +1,74 @@
+<!-- 标题 -->
+<div class="m-subheader">
+    <div class="d-flex align-items-center">
+      <div class="mr-auto">
+        <h3 class="m-subheader__title m-subheader__title--separator">分页</h3>
+        <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+          <li class="m-nav__item m-nav__item--home">
+            <a href="#" class="m-nav__link m-nav__link--icon"><i class="m-nav__link-icon la la-home"></i></a>
+          </li>
+          <li class="m-nav__separator">-</li>
+          <li class="m-nav__item"><a href="" class="m-nav__link"><span class="m-nav__link-text">Pagination</span></a></li>
+  
+        </ul>
+      </div>　
+  
+    </div>
+</div>
+
+
+<!-- 内容 -->
+<div class="m-content">
+    <div class="row">
+      <div class="col-xl-12">
+        <!--begin::table-->
+        <div class="m-portlet">
+          <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+              <div class="m-portlet__head-title">
+                <h3 class="m-portlet__head-text">
+                  Table 实例
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="m-portlet__body"> 
+            <div class="m-section">
+              <div class="m-section__content">
+                <table class="table m-table m-table--head-bg-brand">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Full Name </th>
+                      <th>Email </th>
+                      <th>Age </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let user of userList; let i=index;">
+                      <th scope="row"> {{++i}} </th>
+                      <td> {{user.name}}  </td>
+                      <td> {{user.fullName}} </td>
+                      <td> {{user.email}} </td>
+                      <td> {{user.age}} </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="">
+                 
+                <!-- <p-paginator rows="10" totalRecords="100"></p-paginator>
+                <p-paginator rows="10" totalRecords="100" pageLinkSize="3"></p-paginator>
+                <p-paginator rows="10" totalRecords="120" [rowsPerPageOptions]="[10,20,30]"></p-paginator> -->
+                <p-paginator rows="{{itemsPerPage}}"  totalRecords="{{totalRecords}}"  first="{{offset}}"  [rowsPerPageOptions]="[10,20,30]"  (onPageChange)="pageChanged($event)"> </p-paginator>
+              </div>
+            </div> 
+
+          </div> 
+        </div> 
+
+      </div>
+  </div>
+</div>
+

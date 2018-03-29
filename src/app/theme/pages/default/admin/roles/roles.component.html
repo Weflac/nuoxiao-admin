@@ -1,0 +1,164 @@
+<!-- 标题 -->
+<div class="m-subheader">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator"> 角色 </h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator"> - </li>
+				<li class="m-nav__item"> <a href="" class="m-nav__link"> <span class="m-nav__link-text"> 使用角色进行权限分组.  </span> </a> </li> 
+        
+			</ul>
+		</div>
+		
+	</div>
+</div>
+<!-- 内容 -->
+<div class="m-content">
+	<div class="m-alert m-alert--icon m-alert--air m-alert--square alert alert-dismissible m--margin-bottom-30" role="alert">
+		<div class="m-alert__icon"> <i class="flaticon-exclamation m--font-brand"></i> </div>
+		<div class="m-alert__text"> 静态数据表从HTML表格元素初始化，具有本地列排序和记录分页功能。</div>
+		<div class="m-alert__text"> 
+			<button  class="btn btn-primary " type="button" data-toggle="modal" data-target="#m-modal-role">
+				<span> <i class="la la-plus"></i> <span>添加角色</span> </span>
+			</button>
+			<!--modal： 添加添加角色 --> 
+			<div class="modal fade" id="m-modal-role" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">添加角色</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">
+									&times;
+								</span>
+							</button>
+						</div>
+						<div class="modal-body"> 
+								<ul class="nav nav-tabs  m-tabs-line" role="tablist">
+									<li class="nav-item m-tabs__item">
+										<a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_tabs_6_1" role="tab" ng-reflect-href="#m_tabs_6_1" aria-expanded="false">
+											角色名称
+										</a>
+									</li> 
+									<li class="nav-item m-tabs__item">
+										<a class="nav-link m-tabs__link " data-toggle="tab" href="#m_tabs_6_2" role="tab" ng-reflect-href="#m_tabs_6_3" aria-expanded="true">
+											权限
+										</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane active" id="m_tabs_6_1" role="tabpanel" aria-expanded="true">
+										<div class="form-group">
+											<label>角色名称</label>
+											<input class="form-control ng-pristine ng-invalid ng-touched" maxlength="64" name="DisplayName" required="" type="text">
+										</div>
+			
+										<div class="m-checkbox-list">
+											<label class="m-checkbox">
+												<input id="EditRole_IsDefault" name="IsDefault" type="checkbox" class="ng-untouched ng-pristine ng-valid"> 默认 <span></span>
+											</label>
+											<span class="help-block">新用户将默认拥有此角色.</span>
+										</div>
+									</div>
+									<div class="tab-pane active" id="m_tabs_6_2" role="tabpanel" aria-expanded="true">
+										<div id="m_tree_2" class="tree-demo">
+											<ul>
+												<li>
+												Root node 1
+												<ul>
+													<li data-jstree='{ "selected" : true }'>
+													<a href="javascript:;">
+														Initially selected
+													</a>
+													</li>
+													<li data-jstree='{ "icon" : "fa fa-briefcase m--font-success " }'>
+													custom icon URL
+													</li>
+													<li data-jstree='{ "opened" : true }'>
+													initially open
+													<ul>
+														<li data-jstree='{ "disabled" : true }'>
+														Disabled Node
+														</li>
+														<li data-jstree='{ "type" : "file" }'>
+														Another node
+														</li>
+													</ul>
+													</li>
+													<li data-jstree='{ "icon" : "fa fa-warning m--font-danger" }'>
+													Custom icon class (bootstrap)
+													</li>
+												</ul>
+												</li>
+												<li data-jstree='{ "type" : "file" }'>
+												<a href="http://www.jstree.com">
+													Clickanle link node
+												</a>
+												</li>
+											</ul>
+										</div> 　
+									</div>
+								</div> 
+								<div class="alert alert-warning" style="margin-top: 30px;">
+									<em>如果您正在更改自己的权限，则可能需要刷新页面（F5），以在您所做的权限更改生效！</em>
+								</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal"> 关闭 </button>
+							<button type="button" class="btn btn-primary"> 	保存 </button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="m-portlet m-portlet--mobile">
+		 
+		<div class="m-portlet__body">
+			<!-- 搜索 -->
+			<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
+				<div class="row align-items-center">
+					<div class="col-xl-6 ">
+						<div class="form-group m-form__group row align-items-center">
+							<div class="col-md-11">
+								<div class="m-form__group m-form__group--inline">
+									<div class="m-form__label">
+										<label> 角色: </label>
+									</div>
+									<div class="m-form__control">
+										<select class="form-control m-bootstrap-select m-bootstrap-select--solid" id="m_form_status">
+											<option value=""> All </option>
+											<option value="1"> Pending </option>
+											<option value="2"> Delivered </option>
+											<option value="3"> Canceled </option>
+										</select>
+									</div>
+								</div>
+								<div class="d-md-none m--margin-bottom-10"></div>
+							</div> 
+						</div>
+					</div>
+					<div class="col-xl-6 text-right ">
+						<button class="btn btn-accent btn-outline-info ">
+							<span> <i class="la la-refresh"></i> <span>刷新</span> </span>
+						</button>
+						
+						<div class="m-separator m-separator--dashed d-xl-none"></div>
+					</div>
+				</div>
+			</div> 
+
+			<!--table: 数据列表 -->
+			<div class="row align-items-center">
+				<div class="m_datatable" id="local_data">  </div>
+			</div>
+			
+			  
+		</div>
+	</div>
+</div>

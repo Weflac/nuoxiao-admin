@@ -1,0 +1,81 @@
+<div class="m-content">
+  <div class="m-portlet m-portlet--mobile">
+    <div class="m-portlet__body">
+      <div style="margin-bottom: 20px;">
+        <div style="display: inline;width: 30%;">
+          <button type="button" class="btn btn-secondary btn-sm">
+            <i class="la la-plus-circle"></i>
+            <span>
+							  新增
+              </span>
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm">
+            <i class="la la-trash"></i>
+            <span>
+								删除
+              </span>
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm">
+            <i class="la la-level-up"></i>
+            <span>
+                订单导入
+              </span>
+          </button>
+        </div>
+        <div style="display: inline;width: 70%;float: right;">
+          <div class="input-group input-group-sm" style="width: 260px;float: right">
+            <input type="text" class="form-control m-input"  style="width: 220px;" placeholder="按客户姓名搜索" aria-describedby="basic-addon2">
+            <span class="input-group-addon" id="basic-addon2">
+                <i class="fa fa-search"></i>
+								</span>
+          </div>
+        </div>
+      </div>
+      <div class="m_datatable" id="record_selection">
+        <ngx-datatable
+          class="material striped"
+          [headerHeight]="50"
+          [footerHeight]="50"
+          [rowHeight]="'auto'"
+          [selected]="selected"
+          [selectionType]="'checkbox'"
+          [selectAllRowsOnPage]="false"
+          [externalPaging]="true"
+          [count]="totalPages"
+          [offset]="pageNumber"
+          [limit]="size"
+          [columnMode]="'force'"
+          [scrollbarH]="true"
+          (page)='setPage()'
+          [rows]="rows">
+          <ngx-datatable-column
+            [width]="40"
+            [sortable]="false"
+            [canAutoResize]="true"
+            [draggable]="false"
+            [resizeable]="true"
+            [headerCheckboxable]="true"
+            [checkboxable]="true">
+          </ngx-datatable-column>
+          <ngx-datatable-column name="订单编号" prop="orderNumber" [width]="200"></ngx-datatable-column>
+          <ngx-datatable-column name="客户" prop="customer"></ngx-datatable-column>
+          <ngx-datatable-column name="机型" prop="model"></ngx-datatable-column>
+          <ngx-datatable-column name="订单数量" prop="orderQuantity"></ngx-datatable-column>
+          <ngx-datatable-column name="操作系统类型" prop="osType"></ngx-datatable-column>
+          <ngx-datatable-column name="创建时间" prop="createTime"></ngx-datatable-column>
+          <!--<ngx-datatable-column name="操作">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              <span>{{column.name}}</span>
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <button type="button" class="btn btn-secondary active btn-sm">
+                审批
+              </button>
+            </ng-template>
+          </ngx-datatable-column>-->
+        </ngx-datatable>
+      </div>
+      <!--end: Datatable -->
+    </div>
+  </div>
+</div>

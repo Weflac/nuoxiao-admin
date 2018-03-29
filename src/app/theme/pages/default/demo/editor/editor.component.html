@@ -1,0 +1,112 @@
+<!-- 标题 -->
+<div class="m-subheader">
+    <div class="d-flex align-items-center">
+      <div class="mr-auto">
+        <h3 class="m-subheader__title m-subheader__title--separator">富文本</h3>
+        <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+          <li class="m-nav__item m-nav__item--home">
+            <a href="#" class="m-nav__link m-nav__link--icon"><i class="m-nav__link-icon la la-home"></i></a>
+          </li>
+          <li class="m-nav__separator">-</li>
+          <li class="m-nav__item"><a href="" class="m-nav__link"><span class="m-nav__link-text">Ckeditor</span></a></li>
+  
+        </ul>
+      </div>　
+  
+    </div>
+</div>
+
+<!-- 内容 -->
+<div class="m-content">
+    <div class="row">
+      <div [@flyIn]="'active'">
+        <ckeditor [(ngModel)]="ckeditorContent" debounce="500" [config]="config"> </ckeditor>
+        输入的内容：<br> {{ ckeditorContent }}
+      </div>
+    </div>
+</div>
+
+  <!-- <div [froalaEditor]>Hello, Froala!</div> -->
+<!-- <h1>Angular adapter for the Froala WYSIWYG editor</h1> -->
+<!-- 
+<div class="sample">
+  <h2>Sample 1: Inline Edit</h2>
+  <div [froalaEditor]="titleOptions" [(froalaModel)]="myTitle"></div>
+  <input [(ngModel)]="myTitle" />
+</div>
+<div class="sample">
+  <h2>Sample 2: Full Editor</h2>
+  <div [froalaEditor] [(froalaModel)]="content" ></div>
+  <h4>Rendered Content:</h4>
+  <div [froalaView]="content"></div>
+</div>
+<div class="sample">
+  <h2>Sample 3: Two way binding</h2>
+  <div [froalaEditor] [(froalaModel)]="twoWayContent"></div>
+  <div [froalaEditor] [(froalaModel)]="twoWayContent"></div>
+</div>
+<div class="sample">
+  <h2>Sample 4: Manual Initialization</h2>
+  <button class="manual" (click)="initControls.initialize()">Initialize Editor</button>
+  <button (click)="initControls.destroy()" [hidden]="!initControls || initControls.getEditor() == null">Close Editor</button>
+  <button (click)="deleteAll()" [hidden]="!initControls || initControls.getEditor() == null">Delete All</button>
+  <div [froalaEditor] (froalaInit)="initialize($event)" [(froalaModel)]="sample3Text">Check out the <a href="https://www.froala.com/wysiwyg-editor">Froala Editor</a></div>
+</div>
+<div class="sample">
+  <h2>Sample 5: Editor on 'img' tag. Two way binding.</h2>
+  <img [froalaEditor]="imgOptions" [(froalaModel)]="imgModel" />
+  <img [froalaEditor]="imgOptions" [(froalaModel)]="imgModel" />
+  <h4>Model Obj:</h4>
+  <div>{{imgModel | json}}</div>
+</div>
+<div class="sample">
+  <h2>Sample 6: Editor on 'button' tag</h2>
+  <button [froalaEditor] [(froalaModel)]="buttonModel"></button>
+  <h4>Model Obj:</h4>
+  <div>{{buttonModel | json}}</div>
+</div>
+<div class="sample">
+  <h2>Sample 7: Editor on 'input' tag</h2>
+  <input [froalaEditor] [(froalaModel)]="inputModel" />
+  <h4>Model Obj:</h4>
+  <div>{{inputModel | json}}</div>
+</div>
+<div class="sample">
+  <h2>Sample 8: Editor on 'a' tag. Manual Initialization</h2>
+  <button class="manual" (click)="linkInitControls.initialize()">Initialize Editor</button>
+  <button (click)="linkInitControls.destroy()" [hidden]="!linkInitControls || linkInitControls.getEditor() == null">Close Editor</button>
+  <div>
+    <a [froalaEditor] (froalaInit)="initializeLink($event)" [(froalaModel)]="linkModel">Froala Editor</a>
+  </div>
+  <h4>Model Obj:</h4>
+  <div>{{linkModel | json}}</div>
+</div> 
+<div class="sample">
+  <h2>Sample 9: Editor with reactive forms</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div *ngIf="formModel.invalid"> Name is too short. </div>
+    <h3>Textarea with formControlName and froalaModel</h3>
+    <textarea [froalaEditor] formControlName="formModel" [(froalaModel)]="form.formModel"></textarea>
+    <h4>Rendered Content:</h4>
+    <div [froalaView]="form.value.formModel"></div>
+    <h3>Textarea only with formControlName</h3>
+    <textarea [froalaEditor] formControlName="formModel"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  <button (click)="setValue()">Set preset value</button>
+</div> 
+<div class="sample">
+  <h2>Sample 10: Editor wrapped in a component with reactive forms</h2>
+  <form [formGroup]="form2" (ngSubmit)="onSubmit2()">
+    <div *ngIf="formModel.invalid"> Name is too short. </div>
+
+    <froala-component formControlName="formModel"></froala-component>
+
+    <button type="submit">Submit</button>
+  </form>
+  <button (click)="setValue2()">Set preset value</button>
+</div> 
+<div class="sample">
+  <h2>Sample 11: Add Custom Button</h2>
+  <div [froalaEditor]="options" [(froalaModel)]="content" ></div>
+</div> -->

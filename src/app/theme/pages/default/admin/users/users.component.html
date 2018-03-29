@@ -1,0 +1,267 @@
+<!-- 标题 -->
+<div class="m-subheader">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator"> 用戶 </h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator"> - </li>
+				<li class="m-nav__item"> <a href="" class="m-nav__link"> <span class="m-nav__link-text">管理用户及权限.</span> </a> </li> 
+			</ul>
+		</div>
+		 
+	</div>
+</div>
+<!-- 内容 -->
+<div class="m-content">
+	<div class="m-alert m-alert--icon m-alert--air m-alert--square alert alert-dismissible m--margin-bottom-30" role="alert">
+		<div class="m-alert__icon">
+			<i class="flaticon-exclamation m--font-warning"></i>
+		</div>
+		<div class="m-alert__text">
+			静态数据表从HTML表格元素初始化，具有本地列排序和记录分页功能。
+		</div>
+		<div class="m-alert__text">
+			<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#m-modal-user">
+				<span> <i class="la la-plus"></i> <span> 添加用户 </span> </span>
+			</button>
+			<!--modal： 添加用户 --> 
+			<div class="modal fade" id="m-modal-user" tabindex="-1" role="dialog" >
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">添加用户</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">
+									&times;
+								</span>
+							</button>
+						</div>
+						<div class="modal-body"> 
+								<ul class="nav nav-tabs  m-tabs-line" role="tablist">
+									<li class="nav-item m-tabs__item">
+										<a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_tabs_6_1" role="tab"  >
+											用户信息
+										</a>
+									</li> 
+									<li class="nav-item m-tabs__item">
+										<a class="nav-link m-tabs__link " data-toggle="tab" href="#m_tabs_6_2" role="tab"  >
+											角色 <span class="m-badge  m-badge--danger">2</span>  
+										</a>
+									</li>
+									<li class="nav-item m-tabs__item">
+										<a class="nav-link m-tabs__link " data-toggle="tab" href="#m_tabs_6_3" role="tab"  >
+											组织机构
+										</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane active" id="m_tabs_6_1" role="tabpanel"  > 
+										<div  class="row">
+											<div  class="col-sm-3 text-center margin-bottom-15 margin-top-15">
+												<img  class="img-thumbnail img-rounded" height="128" width="128" src="/assets/common/images/default-profile-picture.png">
+											</div>
+											<div  class="col-sm-9">
+												<div  class="form-group">
+													<label >名字</label>
+													<input  class="form-control ng-pristine ng-invalid ng-touched" maxlength="32" name="Name" required="" type="text">
+												</div>
+
+												<div  class="form-group">
+													<label >姓氏</label>
+													<input  class="form-control ng-untouched ng-pristine ng-invalid" maxlength="32" name="Surname" required="" type="text">
+												</div>
+											</div>
+										</div>
+										<div  class="form-group">
+											<label >邮箱地址</label>
+											<input  class="form-control ng-untouched ng-pristine ng-invalid" maxlength="256" name="EmailAddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required="" type="email">
+										</div>
+
+										<div  class="form-group">
+											<label >电话号码</label>
+											<input  class="form-control ng-untouched ng-pristine ng-valid" maxlength="24" name="PhoneNumber" type="text">
+										</div>
+
+										<div  class="form-group">
+											<label >用户名</label>
+											<input  class="form-control ng-touched ng-dirty ng-valid" maxlength="32" name="UserName" required="" type="text">
+											
+										</div>
+
+										<div  class="m-checkbox-list">
+											<label  class="m-checkbox" for="EditUser_SetRandomPassword">
+												<input  id="EditUser_SetRandomPassword" name="SetRandomPassword" type="checkbox" class="ng-untouched ng-pristine ng-valid">
+												使用随机密码.
+												<span ></span>
+											</label>
+										</div>
+										<div  class="form-group" hidden="">
+											<div  class="right">
+												<label >密码</label>
+												<input  class="form-control ng-valid ng-touched ng-dirty" id="Password" maxlength="32" name="Password" reverse="true" type="password" validateequal="PasswordRepeat">
+											</div>
+										</div>
+										<div  hidden="">
+											
+										</div>
+										
+										<div  hidden="">
+											
+										</div>
+										<div  class="m-checkbox-list">
+											<label  class="m-checkbox" for="EditUser_ShouldChangePasswordOnNextLogin">
+												<input  id="EditUser_ShouldChangePasswordOnNextLogin" name="ShouldChangePasswordOnNextLogin" type="checkbox" class="ng-untouched ng-pristine ng-valid">
+												下次登录需要修改密码.
+												<span ></span>
+											</label>
+
+											<label  class="m-checkbox" for="EditUser_SendActivationEmail">
+												<input  id="EditUser_SendActivationEmail" name="SendActivationEmail" type="checkbox" class="ng-untouched ng-pristine ng-valid">
+												发送激活邮件.
+												<span ></span>
+											</label>
+
+											<label  class="m-checkbox" for="EditUser_IsActive">
+												<input  id="EditUser_IsActive" name="IsActive" type="checkbox" class="ng-untouched ng-pristine ng-valid">
+												激活
+												<span ></span>
+											</label>
+
+											<label  class="m-checkbox" for="EditUser_IsLockoutEnabled">
+												<input  id="EditUser_IsLockoutEnabled" name="IsLockoutEnabled" type="checkbox" class="ng-untouched ng-pristine ng-valid">
+												是否启用锁定？
+												<span ></span>
+											</label>
+										</div> 
+									</div>
+									<div class="tab-pane  " id="m_tabs_6_2" role="tabpanel"  >
+											<div class="m-checkbox-list">
+												<label class="m-checkbox" for="EditUser_Admin">
+													<input type="checkbox" id="EditUser_Admin" class="ng-untouched ng-pristine ng-valid">
+													Admin
+													<span></span>
+												</label><label class="m-checkbox" for="EditUser_User">
+													<input type="checkbox" id="EditUser_User" class="ng-untouched ng-pristine ng-valid">
+													User
+													<span></span>
+												</label>
+											</div>
+										</div>
+									<div class="tab-pane  " id="m_tabs_6_3" role="tabpanel"  >
+										<div class="form-group">
+											<input class="form-control" id="OrganizationUnitsTreeFilter" type="text" placeholder="搜索...">
+										</div>
+										<div id="m_tree_2" class="tree-demo">
+											<ul>
+												<li>
+												Root node 1
+												<ul>
+													<li data-jstree='{ "selected" : true }'>
+													<a href="javascript:;">
+														Initially selected
+													</a>
+													</li>
+													<li data-jstree='{ "icon" : "fa fa-briefcase m--font-success " }'>
+													custom icon URL
+													</li>
+													<li data-jstree='{ "opened" : true }'>
+													initially open
+													<ul>
+														<li data-jstree='{ "disabled" : true }'>
+														Disabled Node
+														</li>
+														<li data-jstree='{ "type" : "file" }'>
+														Another node
+														</li>
+													</ul>
+													</li>
+													<li data-jstree='{ "icon" : "fa fa-warning m--font-danger" }'>
+													Custom icon class (bootstrap)
+													</li>
+												</ul>
+												</li>
+												<li data-jstree='{ "type" : "file" }'>
+												<a href="http://www.jstree.com">
+													Clickanle link node
+												</a>
+												</li>
+											</ul>
+										</div> 　
+									</div>
+								</div> 
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal"> 关闭 </button>
+							<button type="button" class="btn btn-primary"> 	保存 </button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn btn-primary btn-outline-info">
+				<span> <i class="la la-file-excel-o"></i> <span> 导出到Excel </span> </span>
+			</button>
+		</div>
+    </div>
+  
+    <div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__body">
+			<!--table列表: 搜索 -->
+			<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
+				<div class="m-form m-form--label-align-right">
+					<div class="row align-items-center m--margin-bottom-10">
+						<div class="col-xl-12">
+							<div class="form-group m-form__group align-items-center">
+								<div class="input-group">
+									<input class="form-control m-input  " autofocus="" name="filterText" type="text" placeholder="搜索...">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="submit"><i class="flaticon-search-1"></i></button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row m--margin-bottom-10">
+						<div class="ng-tns-c4-1 col-md-6">
+							<div class="form-group">
+								<!-- <permission-combo class="ng-tns-c4-1">
+									指令：权限
+								</permission-combo> -->
+							</div>
+						</div>
+						<div class="col-md-6 ng-tns-c4-1">
+							<div class="form-group">
+								<!-- <role-combo class="ng-tns-c4-1">
+									指令：角色
+								</role-combo> -->
+							</div>
+						</div>
+					</div>
+
+					<div class="row margin-bottom-10 ng-tns-c4-1">
+						<div class="col-sm-12 text-right">
+							<button class="btn btn-metal"><i class="fa fa-refresh"></i> 刷新</button>
+						</div>
+					</div>
+					
+					<div class="row margin-bottom-10">
+						<div class="col-sm-12"> 
+							<span class="clickable-item text-muted ng-tns-c4-1"><i class="fa fa-angle-up"></i> 隐藏高级过滤</span>
+						</div>
+					</div>
+				</div> 
+			</div> 
+
+			<!--table: 列表 -->
+			<div class="row align-items-center">
+				<div class="m_datatable" id="scrolling_vertical"></div>
+			</div>
+			
+		</div>
+	</div>
+</div>

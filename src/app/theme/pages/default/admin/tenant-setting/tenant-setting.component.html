@@ -1,0 +1,205 @@
+<!-- 标题 -->
+<div class="m-subheader">
+    <div class="d-flex align-items-center">
+      <div class="mr-auto">
+        <h3 class="m-subheader__title m-subheader__title--separator">设置</h3>
+        <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+          <li class="m-nav__item m-nav__item--home">
+            <a href="#" class="m-nav__link m-nav__link--icon">　<i class="m-nav__link-icon la la-home"></i></a>
+          </li>
+          <li class="m-nav__separator">	-　</li>
+          <li class="m-nav__item"><a href="" class="m-nav__link"><span class="m-nav__link-text">  显示和修改程序设置 </span></a></li> 
+  
+        </ul>
+      </div>　
+  
+    </div>
+  </div> 
+  
+  <!-- 内容 -->
+  <div class="m-content">
+    <div class="row">
+      <div class="col-xl-12">
+
+        <div class="m-portlet m-portlet--tabs">
+            <div class="m-portlet__head">
+                <div class="m-portlet__head-tools">
+                    <ul class="nav nav-tabs  m-tabs-line" role="tablist">
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_tabs_6_1" role="tab" >
+                                出现 
+                            </a>
+                        </li> 
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link " data-toggle="tab" href="#m_tabs_6_2" role="tab"  >
+                                用户管理
+                            </a>
+                        </li>
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link " data-toggle="tab" href="#m_tabs_6_3" role="tab"  >
+                                安全
+                            </a>
+                        </li>
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link " data-toggle="tab" href="#m_tabs_6_4" role="tab"  >
+                                发票
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-portlet__head-tools">
+                    <button class="btn btn-primary" type="button" ><i class="la la-save"></i> 保存</button>
+                </div>
+            </div>
+            
+            <div class="m-portlet__body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="m_tabs_6_1" role="tabpanel" >
+                        <div class="row m-form">
+                            <div class="col-md-6">
+                                <h5 class="ng-tns-c2-11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">应用徽标</font></font></h5>
+                                <form class="ng-tns-c2-11 " novalidate="">
+                                    <div class="form-group">
+                                        <input class="col-lg-12" ng2fileselect="" required="" type="file">
+                                        <span class="m-form__help col-lg-12"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">选择最大30KB大小和168x33像素分辨率的JPG / JPEG / PNG / GIF文件。</font></font></span>
+                                    </div>
+                                    <button class="btn btn-primary" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上传</font></font></button>
+                                    <button class="btn btn-default" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">清除</font></font></button>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="ng-tns-c2-11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自定义CSS</font></font></h5>
+                                
+                                <form class="ng-tns-c2-11 " novalidate="">
+                                    <div class="form-group">
+                                        <input class="col-lg-12" ng2fileselect="" required="" type="file">
+                                        <span class="m-form__help col-lg-12"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">选择一个最大为1MB大小的.css文件。</font></font></span>
+                                    </div>
+                                    <button class="btn btn-primary" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上传</font></font></button>
+                                    <button class="btn btn-default" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">清除</font></font></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane  " id="m_tabs_6_2" role="tabpanel" >
+                        <div class="m-form">
+                            <h5 class="ng-tns-c2-11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基于表单身份验证</font></font></h5>
+                            <div class="m-checkbox-list">
+                                <div class="form-group m-form__group">
+                                    <label class="m-checkbox" for="Setting_AllowSelfRegistration">
+                                        <input class="m-check " id="Setting_AllowSelfRegistration" name="AllowSelfRegistration" type="checkbox"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        允许用户注册。
+                                        </font></font><span class="ng-tns-c2-11"></span>
+                                    </label>
+                                    <span class="m-form__help"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果此项被禁用，只能由管理员通过用户管理页面添加用户。</font></font></span>
+                                </div>
+                                <div class="form-group m-form__group">
+                                    <label class="m-checkbox" for="Setting_IsNewRegisteredUserActiveByDefault">
+                                        <input class="ng-tns-c2-11 " id="Setting_IsNewRegisteredUserActiveByDefault" name="IsNewRegisteredUserActiveByDefault" type="checkbox"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        注册用户默认激活。
+                                        </font></font><span class="ng-tns-c2-11"></span>
+                                    </label>
+                                    <span class="m-form__help"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果此项被禁用，新用户需要通过邮件激活后才能登录。</font></font></span>
+                                </div>
+                                <label class="m-checkbox" for="Setting_UseCaptchaOnRegistration">
+                                    <input class="ng-tns-c2-11 " id="Setting_UseCaptchaOnRegistration" name="UseCaptchaOnRegistration" type="checkbox"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    用户注册时使用图片验证码（验证码）。
+                                    </font></font><span class="ng-tns-c2-11"></span>
+                                </label>
+                            </div>
+                        </div>
+            
+                        <div class="ng-tns-c2-11">
+                            <h5 class="margin-top-20"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其它设置</font></font></h5>
+                            <label class="m-checkbox" for="Setting_IsEmailConfirmationRequiredForLogin">
+                                <input class="ng-tns-c2-11 " id="Setting_IsEmailConfirmationRequiredForLogin" name="IsEmailConfirmationRequiredForLogin" type="checkbox"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                必须验证邮箱地址后才能登录。
+                                </font></font><span class="ng-tns-c2-11"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab-pane  " id="m_tabs_6_3" role="tabpanel" >
+                        <div class="ng-tns-c2-11">
+                            <h5 class="ng-tns-c2-11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">密码复杂性</font></font></h5>
+                            <label class="m-checkbox" for="Setting_PasswordComplexity_UseDefaultSettings">
+                                <input class="ng-tns-c2-11 " id="Setting_PasswordComplexity_UseDefaultSettings" name="Setting_PasswordComplexity_UseDefaultSettings" type="checkbox"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                使用默认设置
+                                </font></font><span class="ng-tns-c2-11"></span>
+                            </label>
+                            <div class="m-checkbox-list">
+                                <label class="m-checkbox" for="Setting_PasswordComplexity_RequireDigit">
+                                    
+                                    <input disabled="" id="Setting_PasswordComplexity_RequireDigit" name="Setting_PasswordComplexity_RequireDigit" type="checkbox" class="ng-tns-c2-11 "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    需要数字
+                                    </font></font><span class="ng-tns-c2-11"></span>
+                                </label>
+                                <label class="m-checkbox" for="Setting_PasswordComplexity_RequireLowercase">
+                                    
+                                    <input disabled="" id="Setting_PasswordComplexity_RequireLowercase" name="Setting_PasswordComplexity_RequireLowercase" type="checkbox" class="ng-tns-c2-11 "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    需要小写
+                                    </font></font><span class="ng-tns-c2-11"></span>
+                                </label>
+                                <label class="m-checkbox" for="Setting_PasswordComplexity_RequireNonAlphanumeric">
+                                    
+                                    <input disabled="" id="Setting_PasswordComplexity_RequireNonAlphanumeric" name="Setting_PasswordComplexity_RequireNonAlphanumeric" type="checkbox" class="ng-tns-c2-11 ">
+                                    要求非字母数字
+                                    <span class="ng-tns-c2-11"></span>
+                                </label>
+                                <label class="m-checkbox" for="Setting_PasswordComplexity_RequireUppercase">
+                                    
+                                    <input disabled="" id="Setting_PasswordComplexity_RequireUppercase" name="Setting_PasswordComplexity_RequireUppercase" type="checkbox" class="ng-tns-c2-11 ">
+                                    需要大写
+                                    <span class="ng-tns-c2-11"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="ng-tns-c2-11">所需的长度</label>
+                                
+                                <input class="form-control ng-tns-c2-11 "   name="RequiredLength" type="number">
+                            </div>
+                        </div>
+            
+                        <div class="ng-tns-c2-11">
+                            <h5 class="ng-tns-c2-11">用户锁定</h5>
+                            <div class="md-checkbox-list">
+                                <div class="ng-tns-c2-11">
+                                    <label class="m-checkbox" for="Setting_UserLockOut_IsEnabled">
+                                        <input class="ng-tns-c2-11 " id="Setting_UserLockOut_IsEnabled" name="Setting_UserLockOut_IsEnabled" type="checkbox">
+                                        登录失败后启用用户的帐户锁定
+                                        <span class="ng-tns-c2-11"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group ng-tns-c2-11">
+                                <label class="ng-tns-c2-11">在锁定帐户之前的累计登录失败的最大数量</label>
+                                <input class="form-control edited " name="MaxFailedAccessAttemptsBeforeLockout" type="number">
+                            </div>
+                            <div class="form-group ng-tns-c2-11">
+                                <label class="ng-tns-c2-11">帐户锁定持续时间（秒）</label>
+                                <input class="form-control edited " name="DefaultAccountLockoutSeconds" type="number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane  " id="m_tabs_6_4" role="tabpanel" >
+                        <h5 class="ng-tns-c2-11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发票信息</font></font></h5>
+                        <div class="form-group">
+                            <label class="ng-tns-c2-11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">合法名称</font></font></label>
+                            <input class="form-control " maxlength="64" name="legalName" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label class="ng-tns-c2-11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">地址</font></font></label>
+                            <textarea class="form-control " maxlength="256" name="address" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="ng-tns-c2-11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">税务/ VatNo</font></font></label>
+                            <input class="form-control " maxlength="32" name="taxVatNo" type="text">
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>  
+       
+      </div>
+    </div>
+  </div>
+  
