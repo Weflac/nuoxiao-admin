@@ -9,11 +9,33 @@
     "experimentalDecorators": true,
     "target": "es5",
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "./typings/**/*.d.ts",
+      "../vendor/tslib/tslib.d.ts"
     ],
     "lib": [
       "es2017",
       "dom"
+    ], 
+    "types": [
+      "hammerjs",
+      "node",
+      "source-map",
+      "uglify-js",
+      "webpack"
     ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  }, 
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
   }
 }
+ 
